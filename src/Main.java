@@ -21,22 +21,16 @@ public class Main {
         // method to take the players names
         getPlayerNames();
 
-        // starting point of the game where the border is shawn
-        int remainingSlots = ticTacToePanel.showTheBorder(panelArray);
-
         // boolean variable to monitor when Player 1 is playing
         boolean playerOneTurn = true;
 
         // boolean variable to monitor if there is a winner
-        boolean win = false;
+        boolean win;
 
         // repetition of max 9 times (the max numbers of plays that can occur in TicTacToe
         for (int i = 0; i < 9; i++) {
-            // get player's coordinations where to put his symbol
+            // get player's coordinates where to put his symbol
             playerChoice(playerOneTurn);
-
-            // calculate how many slots remain
-            remainingSlots = ticTacToePanel.showTheBorder(panelArray);
 
             // only after 5 plays (i = 4) a win is possible
             if (i >= 4) {
@@ -52,7 +46,7 @@ public class Main {
                     }
                     break;
                 }
-                // esle we have draw
+                // else we have draw
                 else {
                     if (i == 8) {
                         System.out.println("\nΙΣΟΠΑΛΙΑ");
@@ -70,7 +64,7 @@ public class Main {
 
         System.out.println("ΠΑΡΑΚΑΛΩ ΔΩΣΤΕ ΤΟ ΟΝΟΜΑ ΤΟΥ ΠΡΩΤΟΥ ΠΑΙΧΤΗ:");
         playerName = userInput.nextLine();
-        // if user gives not a name, then he is assigned his olayers name
+        // if user gives not a name, then he is assigned his player's name
         if (playerName.equals("")) {
             playerName = "Player 1";
         }
