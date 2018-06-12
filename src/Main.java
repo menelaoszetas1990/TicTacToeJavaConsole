@@ -29,6 +29,8 @@ public class Main {
 
         // repetition of max 9 times (the max numbers of plays that can occur in TicTacToe
         for (int i = 0; i < 9; i++) {
+            ticTacToePanel.showTheBorder(panelArray);
+
             // get player's coordinates where to put his symbol
             playerChoice(playerOneTurn);
 

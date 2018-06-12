@@ -2,9 +2,6 @@ public class Player {
     // private variable to keep the players name
     private String playerName;
 
-    // empty constructor
-    public Player() {}
-
     // special constructor to insert the player's name
     public Player( String name) {
         this.playerName = name;

@@ -1,9 +1,9 @@
 public class TicTacToePanel {
     // empty constructor
-    public TicTacToePanel () {}
+    public TicTacToePanel() {}
 
     // method to show the border and calculate the remaining slots
-    public int showTheBorder (int[][] panel) {
+    public int showTheBorder(int[][] panel) {
 
         int remainingSlots = 9;
         // assisting table for the printing of each row
