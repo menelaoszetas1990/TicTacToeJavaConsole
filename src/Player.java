@@ -1,4 +1,5 @@
 public class Player {
+    // private variable to keep the players name
     private String playerName;
 
     // empty constructor
@@ -9,15 +10,7 @@ public class Player {
         this.playerName = name;
     }
 
-//    // getter and setter methods
-//    public void setPlayerName(String playerName) {
-//        this.playerName = playerName;
-//    }
-//
-//    public String getPlayerName() {
-//        return playerName;
-//    }
-
+    // overriding toString method so we show the player's name instead
     @Override
     public String toString() {
         return playerName;

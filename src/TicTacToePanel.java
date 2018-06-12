@@ -6,10 +6,13 @@ public class TicTacToePanel {
     public int showTheBorder (int[][] panel) {
 
         int remainingSlots = 9;
+        // assisting table for the printing of each row
         char[] rowSymbol = new char[3];
 
-        System.out.println("\t 1\t 2\t 3\n");
+        // horizontal numbers at the top that show the column number
+        System.out.println("\n\t 1\t 2\t 3\n");
 
+        // repetition in order to fill the border with the appropriate symbols
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (panel[i][j] == -1) {
@@ -25,13 +28,17 @@ public class TicTacToePanel {
                 }
             }
             System.out.println((i+1) + "\t " + rowSymbol[0] + " | " + rowSymbol[1] + " | " + rowSymbol[2]);
+
             if (i < 2)
                 System.out.println("\t---+---+---");
         }
+
+        // after the creation of the board the reaming slots available are returned
         return remainingSlots;
     }
 
-    public boolean isThereAWinner(int [][] panelArray) {
+    // method to check if any of the players has won
+    public boolean isThereAWinner(int[][] panelArray) {
         // 8 ways to win.
 
         // first row same symbols
@@ -66,6 +73,7 @@ public class TicTacToePanel {
         if (panelArray[0][2] == panelArray[1][1] && panelArray[1][1] == panelArray[2][0] && panelArray[0][2] != 0)
             return true;
 
+        // else there is no winner
         return false;
     }
 }
