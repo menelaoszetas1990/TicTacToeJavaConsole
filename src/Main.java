@@ -66,7 +66,7 @@ public class Main {
 
     // private method to get players names
     private static void getPlayerNames() {
-        String playerName = "";
+        String playerName;
 
         System.out.println("ΠΑΡΑΚΑΛΩ ΔΩΣΤΕ ΤΟ ΟΝΟΜΑ ΤΟΥ ΠΡΩΤΟΥ ΠΑΙΧΤΗ:");
         playerName = userInput.nextLine();
